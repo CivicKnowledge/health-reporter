@@ -1,0 +1,159 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: Ambry Indicator
+  description: "Returns indicators from properly classified Ambry bundles. \n"
+schemes:
+  - http
+host: indicator.civicknowledge.com
+basePath: /indicators
+paths:
+  /measures/list:
+    get:
+      description: List all of the measures
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: An array of measure objects
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Measure'
+  /measures/find:
+    get:
+      description: 'Find measures by name, tag, id or a search query'
+      produces:
+        - application/json
+      parameters:
+        - name: name
+          in: query
+          type: string
+        - name: tag
+          in: query
+          type: string
+        - name: id
+          in: query
+          type: string
+        - name: search
+          in: query
+          type: string
+      responses:
+        '200':
+          description: An array of measure objects
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Measure'
+  '/measures/{id}':
+    get:
+      parameters:
+        - name: id
+          in: path
+          description: 'A column reference for a meausre, as a vid, id, vname or name.'
+          type: string
+          required: true
+      responses:
+        '200':
+          description: A single measure object
+          schema:
+            $ref: '#/definitions/Measure'
+  '/measures/{id}/indicator':
+    get:
+      parameters:
+        - name: id
+          in: path
+          description: 'A column reference for a meausre, as a vid, id, vname or name.'
+          type: string
+          required: true
+      description: Return indicator meta data and all indicator data
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: An indicator object
+          schema:
+            type: object
+            items:
+              $ref: '#/definitions/Indicator'
+    post:
+      description: 'Return indicator, with a reduced indicator set'
+      parameters:
+        - name: id
+          in: path
+          description: 'A column reference for a meausre, as a vid, id, vname or name.'
+          type: string
+          required: true
+      responses:
+        200:
+          description: It's all good
+  /dimensions/list: {}
+  /dimensions/find: {}
+  '/dimensions/{id}':
+    get:
+      parameters:
+        - name: id
+          in: path
+          description: 'A column reference for a dimension, as a vid, id, vname or name.'
+          type: string
+          required: true
+      responses:
+        '200':
+          description: A single dimension object
+          schema:
+            $ref: '#/definitions/Dimension'
+  '/{id}':
+    get:
+      parameters:
+        - name: id
+          in: path
+          description: 'A column reference for a meausre, as a vid, id, vname or name.'
+          type: string
+          required: true
+      description: Return indicator meta data and all indicator data
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: An indicator object
+          schema:
+            type: object
+            items:
+              $ref: '#/definitions/Indicator'
+  /:
+    get:
+      description: Return information about the API
+      responses:
+        200:
+          description: Return information about the API
+definitions:
+  data:
+    type: array
+    items:
+      type: array
+      items:
+        type: string
+        
+  Column:
+    type: object
+    discriminator: role
+    required:
+      - vid
+      - role
+    properties:
+      vid:
+        type: string
+      role:
+        type: string
+  Dimension:
+    allOf:
+      - $ref: '#/definitions/Column'
+  Measure:
+    allOf:
+      - $ref: '#/definitions/Column'
+  Indicator:
+    allOf:
+      - $ref: '#/definitions/Column'
+      - properties:
+          data:
+            $ref: '#/definitions/data'

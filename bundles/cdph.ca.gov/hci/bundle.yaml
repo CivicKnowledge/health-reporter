@@ -1,0 +1,336 @@
+about:
+    access: restricted
+    footnote: null
+    grain: null
+    groups: []
+    license: null
+    processed: null
+    remote: restricted
+    rights: null
+    source: null
+    space: null
+    subject: null
+    summary: The goal of HCI is to enhance public health by providing data, a standardized
+        set of  statistical measures, and tools that a broad array of sectors can
+        use for planning healthy communities and evaluating the impact of plans, projects,
+        policy, and environmental changes on community health.
+    tags: []
+    time: null
+    title: Healthy Communities Data and Indicators Project (HCI), Health Reporter Version
+contacts:
+    source:
+        email: HCIOHE@cdph.ca.gov
+        org: California Department of Public Health, Office of Health Equity
+    wrangler:
+        email: eric@civicknowledge.com
+        name: Eric Busboom
+        org: Civic Knowledge
+        url: http://civicknowledge.com
+dependencies: {}
+documentation:
+    caveats: "* The parent/child relationship between meny of the measures and the\
+        \ errors isn't thoroughly documented, \nso many of these connections are guesses.\
+        \ \n"
+external_documentation:
+    abuse_neglect:
+        description: 'Numerator: number of children with allegations of physical abuse,
+            sexual abuse, emotional abuse, general neglect, or severe neglect. For
+            census tracts, places, and county divisions, number of children reported
+            with maltreatment allegations (abuse and neglect, exploitation, caretaker
+            absence/incapacity, at risk, and missing child).
+
+            Denominator: child population. Indicator = (Numerator) / (Denominator)
+            * 100'
+        source: abuse_neglect
+        title: Children reported with neglect or physical or sexual abuse. Narrative
+            and Examples.
+        url: http://www.cdph.ca.gov/programs/Documents/HCI_AbuseNeglectChildren_741-NarrativeExamples-3-13-15.pdf
+    air_quality:
+        description: Three-year annual mean concentration of PM2.5 (average of quarterly
+            means, 2007-2009)
+        source: air_quality
+        title: Average Ambient PM2.5 Concentration. Narrative and Examples.
+        url: http://www.cdph.ca.gov/programs/Documents/PM25Narrative_Examples2-27-14.pdf
+    alcohol_outlets_an:
+        description: "Percent of the population within \xBC mile of alcohol outlets\
+            \ by type of establishment sales"
+        source: alcohol_outlets_an
+        title: Proximity to alcohol outlets (Alameda-Nevada Counties, State, Regions).
+            Narrative and Examples.
+        url: http://www.cdph.ca.gov/programs/Documents/HCI_Alcohol_Outlets_774_Narrative_and_examples-7-15-14.pdf
+    alcohol_outlets_oy:
+        description: "Percent of the population within \xBC mile of alcohol outlets\
+            \ by type of establishment sales"
+        source: alcohol_outlets_oy
+        title: Proximity to alcohol outlets (Orange-Yuba Counties). Narrative and
+            Examples.
+        url: http://www.cdph.ca.gov/programs/Documents/HCI_Alcohol_Outlets_774_Narrative_and_examples-7-15-14.pdf
+    dataset:
+        description: Main webpage for the dataset.
+        source: null
+        title: Dataset Page
+        url: http://www.cdph.ca.gov/programs/Pages/HealthyCommunityIndicators.aspx
+    food_affordability:
+        description: The ratio of dollars to purchase the annual market basket of
+            foods in USDA's low plan for meals eaten at home for a female-headed household
+            with children under 18 years of age, relative to her annual inflation-adjusted
+            income.
+        source: food_affordability
+        title: Average cost of a market basket of nutritious food items relative to
+            income. Narrative and Examples.
+        url: http://www.cdph.ca.gov/programs/Documents/Food_Affordability_Narrative_Examples4-14-13rev7-16-14.pdf
+    healthy_food:
+        description: Modified retail food environment index (mRFEI) No. of healthy
+            food retailers  (No. of healthy + No. of less healthy food retailers)
+            * 100. Stratification Race/ethnicity (8 groups)
+        source: healthy_food
+        title: Modified retail food environment index. Narrative and Examples.
+        url: http://www.cdph.ca.gov/programs/Documents/HCI_RetailFoodEnvironment_75_Narrative_and_examples_11-8-13.pdf
+    high_school_ed:
+        description: Percentage of population 25 years and older completing high school
+            or associate, bachelors, or a more advanced degree
+        source: high_school_ed
+        title: High School or Greater Educational Attainment in the Population Aged
+            25 Years and Older. Narrative and Examples.
+        url: http://www.cdph.ca.gov/programs/Documents/Educ_attain_HS_Narrative_Examples4-28-13.pdf
+    household_crowding:
+        description: The indicator is defined as the percent of household overcrowding
+            (> 1.0 person per room, PPR) and severe overcrowding (> 1.5 PPR). The
+            denominator of the indicator is the total number of households.
+        source: household_crowding
+        title: Percent of household crowding. Narrative and Examples.
+        url: http://www.cdph.ca.gov/programs/Documents/HCI_Housing_Crowding_137_CHASandACS_2006-2010_Narrative7-24-14.pdf
+    household_type:
+        description: Percent of households by type of family and head of household
+        source: household_type
+        title: Household types (State, Counties, Regions, County Divisions, Census
+            tracts (Alameda-Monterey)). Narrative and Examples.
+        url: http://www.cdph.ca.gov/programs/Documents/HCI_Households_746-Narrative-03-19-15.pdf
+    household_type_tracts:
+        description: Percent of households by type of family and head of household
+        source: household_type_tracts
+        title: Household types (Census tracts (Napa-Yuba)). Narrative and Examples.
+        url: http://www.cdph.ca.gov/programs/Documents/HCI_Households_746-Narrative-03-19-15.pdf
+    housing_cost_an:
+        description: The indicator is defined as the percentage of households paying
+            > 30% (and > 50%) of monthly household income toward monthly housing costs-rent
+            and utilities or mortgage, utilities, property tax, insurance, home association
+            fees, etc. The denominator of the indicator is the total number of households.
+        source: housing_cost_an
+        title: Percent of households incurring housing cost burdens (Alameda-Nevada
+            Counties, State, Regions). Narrative and Examples.
+        url: http://www.cdph.ca.gov/programs/Documents/HCI_HousingCostBurden_CHASandACS_106_Narrative7-11-14.pdf
+    housing_cost_os:
+        description: The indicator is defined as the percentage of households paying
+            > 30% (and > 50%) of monthly household income toward monthly housing costs-rent
+            and utilities or mortgage, utilities, property tax, insurance, home association
+            fees, etc. The denominator of the indicator is the total number of households.
+        source: housing_cost_os
+        title: Percent of households incurring housing cost burdens (Orange-Sutter
+            Counties). Narrative and Examples.
+        url: http://www.cdph.ca.gov/programs/Documents/HCI_HousingCostBurden_CHASandACS_106_Narrative7-11-14.pdf
+    housing_cost_ty:
+        description: The indicator is defined as the percentage of households paying
+            > 30% (and > 50%) of monthly household income toward monthly housing costs-rent
+            and utilities or mortgage, utilities, property tax, insurance, home association
+            fees, etc. The denominator of the indicator is the total number of households.
+        source: housing_cost_ty
+        title: Percent of households incurring housing cost burdens (Tehama-Yuba Counties).
+            Narrative and Examples.
+        url: http://www.cdph.ca.gov/programs/Documents/HCI_HousingCostBurden_CHASandACS_106_Narrative7-11-14.pdf
+    how_to_manual:
+        description: An illustrated guide to using, presenting and analysing the indicators.
+        source: null
+        title: How To Manual
+        url: http://www.cdph.ca.gov/programs/Documents/HCI_How-To_Manual10-2014highres.pdf
+    income_inequality:
+        description: Cumulative percentage of household income relative to the cumulative
+            percentage of the number of households expressed on a 0 to 1 scale called
+            the Gini Index (0 = equal incomes for all households, 1 = all income is
+            concentrated in 1 household)
+        source: income_inequality
+        title: Income Inequality. Narrative and Examples.
+        url: http://www.cdph.ca.gov/programs/Documents/Gini_Narrative_Examples5-2-14.pdf
+    jobs_employed_ratio:
+        description: Jobs to Employed Residents Ratio = (Number of jobs) / (Number
+            of employed residents)
+        source: jobs_employed_ratio
+        title: Jobs to employed residents ratio. Narrative and Examples.
+        url: http://www.cdph.ca.gov/programs/Documents/HCI_JobsMatch_769-NarrativeExamples-4-9-15.pdf
+    jobs_housing_ratio:
+        description: Jobs to Housing Ratio = (Number of jobs) / (Number of housing
+            units)
+        source: jobs_housing_ratio
+        title: Jobs to housing ratio. Narrative and Examples.
+        url: http://www.cdph.ca.gov/programs/Documents/HCI_JobHouseRatio_768-NarrativeExamples-4-3-15.pdf
+    living_wage:
+        description: The living wage is defined as the hourly wage rate or annual
+            income that a sole provider working full time (2080 hours/yr) must earn
+            to provide his/her family a minimum standard of living, covering costs
+            of food, child care, health insurance, housing, transportation, and other
+            necessities. An annualized budget is calculated for 8 different types
+            of families (1 adult; 1 adult-1 child; 1 adult-2 children; 1 adult-3 children;
+            2 adults; 2 adults-1 child; 2 adults- 2 children; 2 adults-3 children).
+            The living wage for two family types (an adult with two children and two
+            adults with two children) was applied against the income distribution
+            of single women with children and married couples with children, respectively.
+            The number of families that fell below the living wage, expressed as a
+            percentage of all families of that type, is the indicator.
+        source: living_wage
+        title: Living wage and percent of families with incomes below the living wage.
+            Narrative and Examples.
+        url: http://www.cdph.ca.gov/programs/Documents/HCI_Living_Wage_770_Narrative_and_examples_9-30-13.pdf
+    miles_traveled:
+        description: Annual miles traveled by occurrence 1) per capita, 2) per square
+            mile.
+        source: miles_traveled
+        title: Annual miles traveled by occurrence and mode. Narrative and Examples.
+        url: http://www.cdph.ca.gov/programs/Documents/HCI_MilesByOccurrence_39_Narrative_and_examples_10-3-13.pdf
+    neighborhood_change_al:
+        description: The indicator is the difference in the number of households by
+            income and race/ethnicity between 2000 (baseline) and 2006-2010.
+        source: neighborhood_change_al
+        title: Neighborhood Change (State, Counties, Regions, County Divisions, Census
+            tracts (Alameda-Lake)). Narrative and Examples.
+        url: http://www.cdph.ca.gov/programs/Documents/HCI_NeighborhoodChange_772_NarrativeAndExamples-4-3-15.pdf
+    neighborhood_change_ls:
+        description: The indicator is the difference in the number of households by
+            income and race/ethnicity between 2000 (baseline) and 2006-2010.
+        source: neighborhood_change_ls
+        title: Neighborhood Change (Census tracts (Lassen-Sacramento)). Narrative
+            and Examples.
+        url: http://www.cdph.ca.gov/programs/Documents/HCI_NeighborhoodChange_772_NarrativeAndExamples-4-3-15.pdf
+    neighborhood_change_sy:
+        description: The indicator is the difference in the number of households by
+            income and race/ethnicity between 2000 (baseline) and 2006-2010.
+        source: neighborhood_change_sy
+        title: Neighborhood Change (Census tracts (San Benito-Yuba)). Narrative and
+            Examples.
+        url: http://www.cdph.ca.gov/programs/Documents/HCI_NeighborhoodChange_772_NarrativeAndExamples-4-3-15.pdf
+    open_space:
+        description: Percent of residents within 1/2 mile of a park greater than 1
+            acre, or a beach, open space, or coastline
+        source: open_space
+        title: Percent of residents within 1/2 mile of a park, beach, open space,
+            or coastline. Narrative and Examples.
+        url: http://www.cdph.ca.gov/programs/Documents/ParkBeachOpen_Narrative_Examples4-12-13.pdf
+    ozone:
+        description: Three-year annual average number of days from May to October
+            that exceed the 8-hour federal ozone standard of 0.075 ppm.
+        source: ozone
+        title: Annual Average Number of Unhealthy Days of Ozone Air Pollution. Narrative
+            and Examples.
+        url: http://www.cdph.ca.gov/programs/Documents/Ozone_Narrative_Examples4-14-13.pdf
+    poverty_rate:
+        description: Percentage of all individuals or children (under 18 years of
+            age) whose income in the past 12 months is below the poverty level.
+        source: poverty_rate
+        title: Overall, Concentrated, and Child (under 18 years of age) Poverty Rate.
+            Narrative and Examples.
+        url: http://www.cdph.ca.gov/programs/Documents/HCI_PovertyRate_754_Narrative_Examples11-5-13rev3-12-14.pdf
+    public_transit_bay:
+        description: Percent of population residing within 1/2 mile of bus/rail/ferry
+            stop whose headway (waiting time) is less than 15 minutes during peak
+            commute hours.
+        source: public_transit_bay
+        title: Percent of population residing within 1/2 mile of a major transit stop
+            (Bay Area). Narrative and Examples.
+        url: http://www.cdph.ca.gov/programs/Documents/HCI_RailFerryBus_51_Narrative_and_examples_11-26-13SoCal_MTC_Sac.pdf
+    public_transit_sac:
+        description: Percent of population residing within 1/2 mile of bus/rail/ferry
+            stop whose headway (waiting time) is less than 15 minutes during peak
+            commute hours.
+        source: public_transit_sac
+        title: Percent of population residing within 1/2 mile of a major transit stop
+            (Sacramento County). Narrative and Examples.
+        url: http://www.cdph.ca.gov/programs/Documents/HCI_RailFerryBus_51_Narrative_and_examples_11-26-13SoCal_MTC_Sac.pdf
+    public_transit_sc:
+        description: Percent of population residing within 1/2 mile of bus/rail/ferry
+            stop whose headway (waiting time) is less than 15 minutes during peak
+            commute hours.
+        source: public_transit_sc
+        title: Percent of population residing within 1/2 mile of a major transit stop
+            (South California). Narrative and Examples.
+        url: http://www.cdph.ca.gov/programs/Documents/HCI_RailFerryBus_51_Narrative_and_examples_11-26-13SoCal_MTC_Sac.pdf
+    public_transit_sd:
+        description: Percent of population residing within 1/2 mile of bus/rail/ferry
+            stop whose headway (waiting time) is less than 15 minutes during peak
+            commute hours.
+        source: public_transit_sd
+        title: Percent of population residing within 1/2 mile of a major transit stop
+            (San Diego County). Narrative and Examples.
+        url: http://www.cdph.ca.gov/programs/Documents/HCI_RailFerryBus_51_Narrative_and_examples_11-26-13SoCal_MTC_Sac.pdf
+    registered_voters:
+        description: Two indicators are included 1) Percent of adults (18 years or
+            older) who are registered voters among those eligible. 2) Percent of adults
+            who voted in general elections among those who registered.
+        source: registered_voters
+        title: Voter registration and participation. Narrative and Examples.
+        url: http://www.cdph.ca.gov/programs/Documents/HCI_RegisteredVoters_653_Narrative_and_examples_6-2-14.pdf
+    technical_manual:
+        description: Primary technical manual, with detailed descriptions of how each
+            indicator was constructed.
+        source: null
+        title: Technical Manual
+        url: http://www.cdph.ca.gov/programs/Documents/HCI_TechnicalManual_10-23-14.pdf
+    traffic_fatalities_an:
+        description: Annual number of fatal and severe road traffic injuries 1) per
+            population and 2) per miles traveled by transport mode
+        source: traffic_fatalities_an
+        title: Road Traffic Injuries (Alameda-Nevada Counties, State, Regions). Narrative
+            and Examples.
+        url: http://www.cdph.ca.gov/programs/Documents/HCI_RoadTrafficInjuries_753_Narrative%20_and_examples_10-27-13.pdf
+    traffic_fatalities_oy:
+        description: Annual number of fatal and severe road traffic injuries 1) per
+            population and 2) per miles traveled by transport mode
+        source: traffic_fatalities_oy
+        title: Road Traffic Injuries (Orange-Yuba Counties). Narrative and Examples.
+        url: http://www.cdph.ca.gov/programs/Documents/HCI_RoadTrafficInjuries_753_Narrative%20_and_examples_10-27-13.pdf
+    transport_work:
+        description: Percent of residents aged 16 years and older mode of transportation
+            to work
+        source: transport_work
+        title: Percent of residents mode of transportation to work. Narrative and
+            Examples.
+        url: http://www.cdph.ca.gov/programs/Documents/HCI_Transportation_to_work_42_Narrative_and_examples_10-2-13.pdf
+    unemployment:
+        description: Unemployment rate = (Unemployed population) / (Population in
+            the labor force) * 100
+        source: unemployment
+        title: Unemployment Rate. Narrative and Examples.
+        url: http://www.cdph.ca.gov/programs/Documents/HCI_Unemployment_290_Narrative_and_examples-7-14-14.pdf
+    unsafe_water:
+        description: Percent of the population served by community water systems not
+            meeting regulations of the Safe Drinking Water Act
+        source: unsafe_water
+        title: Unsafe Drinking Water (Alameda-Nevada Counties, State, Regions). Narrative
+            and Examples.
+        url: http://www.cdph.ca.gov/programs/Documents/HCI_DrinkingWater_426_Narrative_and_examples-7-15-14.pdf
+    unsafe_water_oy:
+        description: Percent of the population served by community water systems not
+            meeting regulations of the Safe Drinking Water Act
+        source: unsafe_water_oy
+        title: Unsafe Drinking Water (Orange-Yuba Counties). Narrative and Examples.
+        url: http://www.cdph.ca.gov/programs/Documents/HCI_DrinkingWater_426_Narrative_and_examples-7-15-14.pdf
+    violent_crime:
+        description: Number of violent crimes per 1,000 residents
+        source: violent_crime
+        title: Number of Violent Crimes per 1000 Population. Narrative and Examples.
+        url: http://www.cdph.ca.gov/programs/Documents/ViolentCrime_Narrative_Examples4-14-13.pdf
+    walk_bicycyle:
+        description: Percent of population aged 16 years or older whose commute to
+            work is 10 or more minutes/day by walking or biking
+        source: walk_bicycyle
+        title: Percent of workers' daily commute 10 or more minutes by walking or
+            biking. Narrative and Examples.
+        url: http://www.cdph.ca.gov/programs/Documents/HCI_Walk_Bicycle_778_Narrative_and_examples_3-26-14.pdf
+identity:
+    dataset: hci
+    id: d05s
+    revision: 1
+    source: cdph.ca.gov
+    version: 0.0.1
+    variation: healthrep
+
+requirements: {}
+versions: {}
