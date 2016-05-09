@@ -5,12 +5,42 @@ info:
   description: "Returns indicators from properly classified Ambry bundles. \n"
 schemes:
   - http
-host: indicator.civicknowledge.com
-basePath: /indicators
+#host: indicator.civicknowledge.com
+basePath: /indicators/1
 paths:
+  '/{id}':
+    get:
+      parameters:
+        - name: id
+          in: path
+          description: 'A column reference for a meausre, as a vid, id, vname or name.'
+          type: string
+          required: true
+      description: Return indicator meta data and all indicator data
+      operationId: 'controllers.root.get_measure_root'
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: An indicator object
+          schema:
+            type: object
+            items:
+              $ref: '#/definitions/Indicator'
+  /:
+    get:
+      description: Return information about the API
+      operationId: "controllers.root.get_root"
+      produces:
+      - application/json
+      
+      responses:
+        200:
+          description: Return information about the API
   /measures/list:
     get:
       description: List all of the measures
+      operationId: 'controllers.measures.list_measures'
       produces:
         - application/json
       responses:
@@ -23,6 +53,7 @@ paths:
   /measures/find:
     get:
       description: 'Find measures by name, tag, id or a search query'
+      operationId: 'controllers.measures.find_measure'
       produces:
         - application/json
       parameters:
@@ -47,6 +78,7 @@ paths:
               $ref: '#/definitions/Measure'
   '/measures/{id}':
     get:
+      operationId: 'controllers.measures.get_measure'
       parameters:
         - name: id
           in: path
@@ -67,6 +99,7 @@ paths:
           type: string
           required: true
       description: Return indicator meta data and all indicator data
+      operationId: 'controllers.measures.get_indicator'
       produces:
         - application/json
       responses:
@@ -78,6 +111,7 @@ paths:
               $ref: '#/definitions/Indicator'
     post:
       description: 'Return indicator, with a reduced indicator set'
+      operationId: 'controllers.measures.reduce_indicator'
       parameters:
         - name: id
           in: path
@@ -91,6 +125,7 @@ paths:
   /dimensions/find: {}
   '/dimensions/{id}':
     get:
+      operationId: "controllers.dimensions.get_dimension"
       parameters:
         - name: id
           in: path
@@ -102,30 +137,7 @@ paths:
           description: A single dimension object
           schema:
             $ref: '#/definitions/Dimension'
-  '/{id}':
-    get:
-      parameters:
-        - name: id
-          in: path
-          description: 'A column reference for a meausre, as a vid, id, vname or name.'
-          type: string
-          required: true
-      description: Return indicator meta data and all indicator data
-      produces:
-        - application/json
-      responses:
-        '200':
-          description: An indicator object
-          schema:
-            type: object
-            items:
-              $ref: '#/definitions/Indicator'
-  /:
-    get:
-      description: Return information about the API
-      responses:
-        200:
-          description: Return information about the API
+
 definitions:
   data:
     type: array

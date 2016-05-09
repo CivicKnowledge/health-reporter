@@ -1,0 +1,188 @@
+---
+swagger: "2.0"
+info:
+  description: "Returns indicators from properly classified Ambry bundles. \n"
+  version: "1.0.0"
+  title: "Ambry Indicator"
+basePath: "/indicators/1"
+schemes:
+- "http"
+paths:
+  /:
+    get:
+      tags:
+      - "default_controller"
+      description: "Return information about the API"
+      operationId: "controllers.root.get_root"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        200:
+          description: "Return information about the API"
+  /dimensions/find: {}
+  /dimensions/list: {}
+  /dimensions/{id}:
+    get:
+      tags:
+      - "default_controller"
+      operationId: "controllers.dimensions.get_dimension"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "A column reference for a dimension, as a vid, id, vname or name."
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "A single dimension object"
+          schema:
+            $ref: "#/definitions/Dimension"
+  /measures/find:
+    get:
+      tags:
+      - "default_controller"
+      description: "Find measures by name, tag, id or a search query"
+      operationId: "controllers.measures.find_measure"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "name"
+        in: "query"
+        required: false
+        type: "string"
+      - name: "tag"
+        in: "query"
+        required: false
+        type: "string"
+      - name: "id"
+        in: "query"
+        required: false
+        type: "string"
+      - name: "search"
+        in: "query"
+        required: false
+        type: "string"
+      responses:
+        200:
+          description: "An array of measure objects"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Measure"
+  /measures/list:
+    get:
+      tags:
+      - "default_controller"
+      description: "List all of the measures"
+      operationId: "controllers.measures.list_measures"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        200:
+          description: "An array of measure objects"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Measure"
+  /measures/{id}:
+    get:
+      tags:
+      - "default_controller"
+      operationId: "controllers.measures.get_measure"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "A column reference for a meausre, as a vid, id, vname or name."
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "A single measure object"
+          schema:
+            $ref: "#/definitions/Measure"
+  /measures/{id}/indicator:
+    get:
+      tags:
+      - "default_controller"
+      description: "Return indicator meta data and all indicator data"
+      operationId: "controllers.measures.get_indicator"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "A column reference for a meausre, as a vid, id, vname or name."
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "An indicator object"
+          schema:
+            type: "object"
+            properties: {}
+    post:
+      tags:
+      - "default_controller"
+      description: "Return indicator, with a reduced indicator set"
+      operationId: "controllers.measures.reduce_indicator"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "A column reference for a meausre, as a vid, id, vname or name."
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "It's all good"
+  /{id}:
+    get:
+      tags:
+      - "default_controller"
+      description: "Return indicator meta data and all indicator data"
+      operationId: "controllers.root.get_measure_root"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "A column reference for a meausre, as a vid, id, vname or name."
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "An indicator object"
+          schema:
+            type: "object"
+            properties: {}
+definitions:
+  data:
+    type: "array"
+    items:
+      type: "array"
+      items:
+        type: "string"
+  Column:
+    type: "object"
+    required:
+    - "role"
+    - "vid"
+    discriminator: "role"
+    properties:
+      vid:
+        type: "string"
+      role:
+        type: "string"
+  Dimension:
+    allOf:
+    - $ref: "#/definitions/Column"
+  Measure:
+    allOf:
+    - $ref: "#/definitions/Column"
+  Indicator:
+    allOf:
+    - $ref: "#/definitions/Column"
+    - properties:
+        data:
+          $ref: "#/definitions/data"
